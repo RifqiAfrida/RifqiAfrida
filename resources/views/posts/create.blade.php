@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title')
-    Create Post    
+    Create Post
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
         {{-- Thumbnail --}}
         <div class="form-group">
             <label for="thumbnail">Thumbnail</label>
-            <input class="form-control" type="file" class="thumbnail">
+            <input class="form-control" type="file" name="thumbnail">
         </div>
         {{-- Content --}}
         <div class="form-group">

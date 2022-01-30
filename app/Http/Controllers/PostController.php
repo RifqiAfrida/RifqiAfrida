@@ -37,12 +37,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $filename = $request->file('thumbnail')
-        ->storeAs(
-            'thumbnails', 
-            time().".". $request->file('thumbnail')->getClientOriginalExtension(), 
-            'public'
-        );
+        $filename = $request->file('thumbnail')->storeAs('thumbnails', $request->file('thumbnail')->hashName(), 'public');
 
         Post::create(
             [
